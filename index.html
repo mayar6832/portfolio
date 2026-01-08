@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mayar Elsayed | Senior Full-Stack Developer</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 80px 20px;
+      text-align: center;
+      background: radial-gradient(circle at top, #1e293b, #020617);
+      animation: fadeDown 1s ease;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 24px;
+      border-radius: 14px;
+      transition: transform .3s ease, box-shadow .3s ease;
+      animation: fadeUp .8s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(56,189,248,.15);
+    }
+
+    .project-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(56,189,248,.15);
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #020617;
+      padding: 40px 20px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    @keyframes fadeUp {
+      from {opacity:0; transform: translateY(30px)}
+      to {opacity:1; transform: translateY(0)}
+    }
+
+    @keyframes fadeDown {
+      from {opacity:0; transform: translateY(-30px)}
+      to {opacity:1; transform: translateY(0)}
+    }
+
+.project-card {
+  position: relative;
+}
+
+.project-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity .4s ease;
+  pointer-events: none;
+}
+.project-card:hover .project-video {
+  opacity: 1;
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mayar Elsayed</h1>
+  <p>Senior Full-Stack Developer • Laravel Focused • Open to Global Opportunities</p>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <p>
+    Senior Software Engineer with strong experience delivering scalable web and mobile systems across education, healthcare, e-commerce, and booking platforms. I focus on clean architecture, business-driven design, and long-term maintainability.
+  </p>
+</section>
+
+<section  style="margin-top: -100px;">
+  <h2>Core Expertise</h2>
+  <div class="grid">
+    <div class="card"><strong>Backend</strong><p>Laravel, Node.js, Python, REST APIs, JWT, RBAC</p></div>
+    <div class="card"><strong>Frontend</strong><p>React, HTML5, CSS3, Bootstrap</p></div>
+    <div class="card"><strong>Mobile</strong><p>Flutter, Android (Java), Hybrid Apps</p></div>
+    <div class="card"><strong>Other Technologies</strong><p>Unity (C#), Git & Version Control </p></div>
+    <div class="card"><strong>Architecture</strong><p>Clean Architecture, MVC, SOLID, OOP & Design Patterns</p></div>
+  </div>
+</section>
+
+<section style="margin-top: -100px;">
+  <h2>Selected Projects</h2>
+  <div class="grid">
+<!-- 
+<div class="card">
+  <video class="project-img" autoplay muted loop playsinline>
+    <source src="assets/images/ecommerce/MEMQ.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <span class="badge">MERN Stack</span>
+  <h3>E-Commerce Price Comparison</h3>
+  <p>Aggregates prices from multiple platforms with advanced filtering and optimized search.</p>
+  <a href="projects/ecommerce.html">View Case Study →</a>
+</div> -->
+<div class="card project-card">
+  <img src="assets/images/ecommerce/1.png" class="project-img">
+
+  <video class="project-video" muted loop playsinline>
+    <source src="assets/images/ecommerce/MEMQ.mp4" type="video/mp4">
+  </video>
+
+  <span class="badge">MERN Stack</span>
+  <h3>E-Commerce Price Comparison</h3>
+  <p>Aggregates prices from multiple platforms with advanced filtering.</p>
+  <a href="projects/ecommerce.html">View Case Study →</a>
+</div>
+
+
+
+    <div class="card">
+      <img src="assets/images/university/1.png" class="project-img">
+      <span class="badge">Laravel</span>
+      <h3>University Credit Hours System</h3>
+      <p>Enterprise academic & financial workflows with role-based access.</p>
+      <a href="projects/university.html">View Case Study →</a>
+    </div>
+
+    <div class="card">
+      <img src="assets/images/clinic/1.png" class="project-img">
+      <span class="badge">Healthcare</span>
+      <h3>External Clinics Management</h3>
+      <p>Secure appointments, billing, and patient records.</p>
+      <a href="projects/clinic.html">View Case Study →</a>
+    </div>
+  
+      <div class="card">
+      <img src="assets/images/Instagram_Clone/1.jpg" class="project-img">
+      <span class="badge">Laravel</span>
+      <h3>Instagram Clone</h3>
+      <p>social media application mimicking Instagram features.</p>
+      <a href="projects/Instagram_Clone.html">View Case Study →</a>
+    </div>
+      <div class="card">
+      <img src="assets/images/Hotel/1.jpg" class="project-img">
+      <span class="badge">Android (Java) & Flutter</span>
+      <h3>Hotel Reservation Mobile Application</h3>
+      <p>hotel booking application supporting room availability, reservations, and user management.</p>
+      <a href="projects/Hotel.html">View Case Study →</a>
+    </div>
+    <div class="card">
+      <img src="assets/images/Library/1.jpeg" class="project-img">
+      <span class="badge"> Python</span>
+      <h3>School Library Management System</h3>
+      <p>Designed a library system for a school environment to manage books, borrowing operations, and user roles.</p>
+      <a href="projects/Library.html">View Case Study →</a>
+    </div>
+  </div>
+</section>
+
+<section style="margin-top: -100px;">
+  <h2>Contact</h2>
+     <p>📧 Email: <a href="mayarelsayedabdalphatah@gmail.com">mayarelsayedabdalphatah@gmail.com</a></p>
+  <p style="margin-top: -20px;">📧 Email: <a href="igsr.mayarelsayed24@alexu.edu.eg">igsr.mayarelsayed24@alexu.edu.eg</a></p>
+  <p style="margin-top: -20px;">💻 GitHub: <a href="https://github.com/mayar6832">github.com/mayar6832</a></p>
+
+</section>
+
+<footer>
+  <p>© 2026 Mayar Elsayed • Senior Full-Stack Developer</p>
+</footer>
+
+</body>
+<script>
+  document.querySelectorAll('.project-card').forEach(card => {
+    const video = card.querySelector('video');
+
+    card.addEventListener('mouseenter', () => {
+      video.currentTime = 0;
+      video.play();
+    });
+
+    card.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+</script>
+
+</html>
